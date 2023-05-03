@@ -9,7 +9,8 @@ import { Pokemon } from 'src/app/interfaces/pokemon.interface';
 export class PokemosListComponent {
 
   @Input() pokemons!: Pokemon[];
-
+  @Input() filterPokemmon!:string;
+  
   constructor() { }
   ngOnInit(): void {
   }

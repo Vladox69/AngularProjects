@@ -1,3 +1,4 @@
+<app-pokemons-form-search (pokemonEvent)="onFilter($event)" ></app-pokemons-form-search>
 <div class="container">
-    <app-pokemons-list [pokemons]="pokemons" ></app-pokemons-list>
+    <app-pokemons-list [pokemons]="pokemons" [filterPokemmon]="filterPokemon" ></app-pokemons-list>
 </div>

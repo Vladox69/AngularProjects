@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokemon } from 'src/app/interfaces/pokemon.interface';
-import { Types } from 'src/app/interfaces/types.interface';
 import { PokemonsService } from 'src/app/services/pokemons.service';
-import { TypesService } from 'src/app/services/types.service';
 
 @Component({
   selector: 'app-pokemons-main',
@@ -12,6 +10,8 @@ import { TypesService } from 'src/app/services/types.service';
 export class PokemosMainComponent implements OnInit{
   
   public pokemons!:Pokemon[];
+  public cantidad!:number;
+  public filterPokemon!:string;
 
   public getData(){
     this.pokemons=[];
@@ -31,6 +31,8 @@ export class PokemosMainComponent implements OnInit{
     this.getData();
   }
 
-
+  public onFilter({pokemon}:any):void{
+    this.filterPokemon=pokemon;
+  }
   
 }

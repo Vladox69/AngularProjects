@@ -1,5 +1,5 @@
 <div class="container text-center mt-2 ">
     <div class="row">
-        <app-pokemons-item class="col-xl-4 col-sm-6 col-xs-12" *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></app-pokemons-item>
+        <app-pokemons-item class="col-xl-4 col-sm-6 col-xs-12" *ngFor="let pokemon of pokemons |filter:filterPokemmon" [pokemon]="pokemon" ></app-pokemons-item>
     </div>
 </div>

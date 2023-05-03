@@ -15,6 +15,7 @@ import { PokemonsHomeComponent } from './pokemos-comp/pokemons-home/pokemons-hom
 import { PokemonsFormSearchComponent } from './pokemos-comp/pokemons-form-search/pokemons-form-search.component';
 import { FormsModule } from '@angular/forms';
 import { PokemonsRandomComponent } from './pokemos-comp/pokemons-random/pokemons-random.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PokemonsRandomComponent } from './pokemos-comp/pokemons-random/pokemons
     PokemonsSearchComponent,
     PokemonsHomeComponent,
     PokemonsFormSearchComponent,
-    PokemonsRandomComponent
+    PokemonsRandomComponent,
+    FilterPipe
   ],
   imports: [
     AppRoutingModule,
