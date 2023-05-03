@@ -7,9 +7,13 @@ import { Pokemon } from 'src/app/interfaces/pokemon.interface';
   styleUrls: ['./pokemos-list.component.css']
 })
 export class PokemosListComponent {
-  
-  @Input() pokemons!:Pokemon[];
 
-  constructor(){}
+  @Input() pokemons!: Pokemon[];
+
+  constructor() { }
+  ngOnInit(): void {
+  }
+
+
 
 }

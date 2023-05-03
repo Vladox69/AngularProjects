@@ -9,6 +9,11 @@ import { PokemonsItemComponent } from './pokemos-comp/pokemons-item/pokemons-ite
 
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonsTipoComponent } from './pokemos-comp/pokemons-tipo/pokemons-tipo.component';
+import { AppRoutingModule } from './app.routing.module';
+import { PokemonsSearchComponent } from './pokemos-comp/pokemons-search/pokemons-search.component';
+import { PokemonsHomeComponent } from './pokemos-comp/pokemons-home/pokemons-home.component';
+import { PokemonsFormSearchComponent } from './pokemos-comp/pokemons-form-search/pokemons-form-search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,11 +22,16 @@ import { PokemonsTipoComponent } from './pokemos-comp/pokemons-tipo/pokemons-tip
     NavbarComponent,
     PokemosListComponent,
     PokemonsItemComponent,
-    PokemonsTipoComponent
+    PokemonsTipoComponent,
+    PokemonsSearchComponent,
+    PokemonsHomeComponent,
+    PokemonsFormSearchComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

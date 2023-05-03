@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+.bg-poison{
+    background-color: slateblue;
+}
+
+.bg-fly{
+    background-color: cadetblue;
+}
+
+.bg-water{
+    background-color: blue;
+}
+
+.bg-bug{
+    background-color: bisque;
+}
+
+.bg-normal{
+    background-color: darkgray;
+}

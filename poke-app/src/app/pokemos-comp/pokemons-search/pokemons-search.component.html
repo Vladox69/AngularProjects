@@ -1,0 +1,12 @@
+<h3 class="text-center">Busca un pokemon por su nombre</h3>
+<app-pokemons-form-search (pokemonEvent)="onSearch($event)"></app-pokemons-form-search>
+<div class="row m-0 justify-content-center">
+    <div class="col-auto d-flex">
+        <ng-container *ngIf="pokemon==null;else poke">
+            <div class="alert alert-info mt-2">Cargando pokemon....</div>
+        </ng-container>
+        <ng-template #poke>
+            <app-pokemons-item [pokemon]="pokemon" ></app-pokemons-item>
+        </ng-template>
+    </div>
+</div>

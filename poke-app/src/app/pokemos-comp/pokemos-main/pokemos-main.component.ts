@@ -12,12 +12,10 @@ import { TypesService } from 'src/app/services/types.service';
 export class PokemosMainComponent implements OnInit{
   
   public pokemons!:Pokemon[];
-  public types:string[]=[];
-
 
   public getData(){
     this.pokemons=[];
-    this._pokemonService.getPokemons(2).subscribe(({results}:any)=>{
+    this._pokemonService.getPokemons(20).subscribe(({results}:any)=>{
       results.forEach(({name}:any) => {
         this._pokemonService.getPokemonByName(name)
         .subscribe((response:any)=>{
@@ -27,15 +25,12 @@ export class PokemosMainComponent implements OnInit{
       });
     })
   }
-  
 
-
-  constructor(private readonly _pokemonService:PokemonsService,private readonly _typeService:TypesService){}
-  
+  constructor(private readonly _pokemonService:PokemonsService){}
   ngOnInit(): void {
     this.getData();
-    // throw new Error('Method not implemented.');
   }
+
 
   
 }

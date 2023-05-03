@@ -12,17 +12,6 @@ export class PokemonsItemComponent implements OnChanges,OnInit {
     // throw new Error('Method not implemented.');
   }
   @Input() pokemon!: Pokemon;
-  public tipos!: any;
-  public bgColor!: string;
-  public bgClass(tipo: string): string {
-    switch (tipo) {
-      case 'Fuego':
-        return 'bg-danger';
-      default:
-        return '';
-    }
-  }
-
   constructor() {}
   ngOnInit(): void {
         

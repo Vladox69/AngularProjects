@@ -13,11 +13,19 @@ export class PokemonsTipoComponent implements OnInit {
   public bgClass(tipo: string): string {
     switch (tipo) {
       case 'Fuego':
-        return 'bg-danger text-white';
+        return 'bg-warning text-white';
       case 'Planta':
         return 'bg-success text-white';
+      case 'Veneno':
+        return 'bg-poison text-white';
+      case 'Volador':
+        return 'bg-fly text-white';
+      case 'Agua':
+        return 'bg-water text-white';
+      case 'Bicho':
+        return 'bg-bug text-white';
       default:
-        return '';
+        return 'bg-normal text-white';
     }
   }
 

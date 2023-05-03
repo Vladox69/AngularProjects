@@ -26,7 +26,7 @@ export class PokemonsService {
 
   public buildPokemon(response: any): Pokemon {
     const { abilities, height, id, moves, name, sprites, weight, types } = response;
-    let urlImg = sprites.other['official-artwork'].front_default;
+    let urlImg:string = sprites.other['official-artwork'].front_default;
     let typesS:string[]=[];
     types.forEach(({ type }: any) => {
       this._serviceTypes.getType(type.url).subscribe(({ names }) => {
