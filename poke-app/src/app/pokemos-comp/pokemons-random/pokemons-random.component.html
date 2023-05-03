@@ -1,0 +1,16 @@
+<div class="row m-0 justify-content-center">
+
+    <div class="col-auto d-flex">
+        <ng-container *ngIf="pokemon==null;else poke">
+            <div class="mt-2 alert alert-info">Cargando Pokemoon....</div>
+        </ng-container>
+        <ng-template #poke>
+            <app-pokemons-item [pokemon]="pokemon" ></app-pokemons-item>
+        </ng-template>
+    </div>
+</div>
+<div class="row m-0 justify-content-center">
+    <div class="col-auto">
+        <button class="btn btn-danger text-white" (click)="onGetRandom()">Random</button>
+    </div>
+</div>

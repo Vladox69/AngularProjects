@@ -24,6 +24,18 @@ export class PokemonsTipoComponent implements OnInit {
         return 'bg-water text-white';
       case 'Bicho':
         return 'bg-bug text-white';
+      case 'Hada':
+        return 'bg-hada text-white';
+      case 'Acero':
+        return 'bg-acero text-white';
+      case 'Dragón':
+        return 'bg-dragon text-white';
+      case 'Eléctrico':
+        return 'bg-electrico text-white'
+      case 'Psíquico':
+        return 'bg-psiq text-white';
+      case 'Roca':
+        return 'bg-roca text-white';
       default:
         return 'bg-normal text-white';
     }

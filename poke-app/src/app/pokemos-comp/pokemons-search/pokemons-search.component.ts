@@ -9,16 +9,15 @@ import { PokemonsService } from 'src/app/services/pokemons.service';
 })
 export class PokemonsSearchComponent {
 
-  public pokemon!:Pokemon;
+  public pokemon!: Pokemon | any;
 
-  public onSearch({pokemon}:any):void{
-    this._servicePokemon.getPokemonByName(pokemon).subscribe((response)=>{
-        this.pokemon=this._servicePokemon.buildPokemon(response);
-      })    
+  public onSearch({ pokemon }: any): void {
+    this.pokemon = null;
+    this._servicePokemon.getPokemonByName(pokemon).subscribe((response) => {
+      this.pokemon = this._servicePokemon.buildPokemon(response);
+    })
   }
 
-  constructor(private readonly _servicePokemon:PokemonsService){}
-
-
+  constructor(private readonly _servicePokemon: PokemonsService) { }
 
 }
